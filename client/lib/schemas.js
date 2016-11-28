@@ -96,6 +96,7 @@ Schema.q6 = new SimpleSchema({
   }
 });
 
+
 Schema.q7 = new SimpleSchema({
   areastensas: {
     type: String,
