@@ -1,0 +1,8 @@
+/* CSS declarations go here */
+.wizard-nav,.steps{text-align: center;}
+.steps ol {display: inline-flex;}
+.steps ol li {
+    margin: 5px;
+    padding: 10px;
+}
+

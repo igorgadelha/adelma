@@ -1,0 +1,37 @@
+<template name="q7">
+  {{> quickForm id="q7" doc=step.data schema=schema }}
+  {{>example }}
+
+</template>
+
+
+  <template name="example">
+	<div class="row">
+		<div class="col-md-6">
+			<ul class="list-group">
+				<li data-id="{{order}}" class="list-group-item sortable-handle disabled">
+					ARRASTE PARA O BALÃO AS QUALIDADES DA/O PARCEIRA/O
+				</li>
+			  {{#sortable id="q7" handle=".sortable-handle" animation=100 options=exampleOptions}} 
+			  	 
+			  {{/sortable}}
+	  		</ul>
+		</div>
+		<div class="col-md-6">
+			<ul class="list-group">
+			  {{#sortable id="q7-2" items=exampleItems handle=".sortable-handle" animation=100 options=exampleOptions}} 
+			  	{{>item }} 
+			  {{/sortable}}
+	  		</ul>
+		</div>
+	 	<div class="col-md-12">
+    		{{> wizardButtons}} 	
+	 	</div>
+	</div>
+</template>
+
+<template name="item">
+	<li data-id="{{order}}" class="list-group-item sortable-handle">
+		{{title}}
+	</li>
+</template>

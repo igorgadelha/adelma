@@ -1,0 +1,17 @@
+<template name="q1">
+  {{#autoForm id="q1" doc=step.data schema=schema }}
+ 	<div class="row center">
+	 	<div class="col-md-8 col-md-offset-2">
+		    {{> afQuickField name="inspirar"}}	
+	 	</div>	 	
+	 	<div class="col-md-8 col-md-offset-2">
+   			{{> afQuickField name="expirar"}}
+	 	</div>
+	 	<div class="col-md-12">
+    		{{> wizardButtons}} 	
+	 	</div>
+ 	</div>
+ 
+ 
+  {{/autoForm}}
+</template>
