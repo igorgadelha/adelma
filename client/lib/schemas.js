@@ -96,7 +96,24 @@ Schema.q6 = new SimpleSchema({
   }
 });
 
-Schema.q7 = new SimpleSchema();
+Schema.q7 = new SimpleSchema({
+  areastensas: {
+    type: String,
+    optional: true,
+    label:"MARQUE A AÇÃO QUE GOSTARIA DE REALIZAR PARA SE ACALMAR",    
+    autoform: {
+      type: "select2",
+      options: function () {
+        return [
+          {label: "ESTICAR TODO CORPO", value: "CABEÇA"},
+          {label: "INSPIRAR E EXPIRAR", value: "PESCOÇO"},
+          {label: "FECHAR OS OLHOS E OUVIR MÚSICA", value: "OMBROS"},
+          {label: "ISOLAR PARA REORGANIZAR OS PENSAMENTOS", value: "MÃOS"}
+        ];
+      }
+    }
+  }
+});
 
 Schema.q8 = new SimpleSchema({
   areastensas: {
