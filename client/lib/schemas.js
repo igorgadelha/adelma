@@ -24,7 +24,7 @@ Schema.q1 = new SimpleSchema({
 
 Schema.q2 = new SimpleSchema({
   areastensas: {
-    type: String,
+    type: [String],
     optional: true,
     label:"MARQUE  AS ÁREAS DO SEU CORPO QUE FICAM MAIS TENSAS EM SITUAÇÕES DE CONFLITO",    
     autoform: {
@@ -57,7 +57,7 @@ Schema.q3 = new SimpleSchema({
 
 Schema.q4 = new SimpleSchema({
   areastensas: {
-    type: String,
+    type: [String],
     optional: true,
     label:"MARQUE A AÇÃO QUE GOSTARIA DE REALIZAR PARA SE ACALMAR",    
     autoform: {
@@ -100,11 +100,14 @@ Schema.q6 = new SimpleSchema({
 
 Schema.q7 = new SimpleSchema({
   areastensas: {
-    type: String,
+    type: [String],
     optional: true,
     label:"MARQUE A AÇÃO QUE GOSTARIA DE REALIZAR PARA SE ACALMAR",    
     autoform: {
       type: "select2",
+      afFieldInput: {
+        multiple: true
+      },
       options: function () {
         return [
           {label: "ESTICAR TODO CORPO", value: "CABEÇA"},
@@ -142,11 +145,14 @@ Schema.q9 = new SimpleSchema({
 
 Schema.q10 = new SimpleSchema({
   areastensas: {
-    type: String,
+    type: [String],
     optional: true,
     label:"CHEGOU SUA VEZ DE SE AVALIAR MARQUE AS SUAS CARACTERÍSTICAS",    
     autoform: {
-      type: "select-checkbox-inline",
+      type: "select2",
+      afFieldInput: {
+        multiple: true
+      },
       options: function () {
         return [
           {label: "Controlador", value: "CABEÇA"},

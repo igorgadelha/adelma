@@ -34,7 +34,7 @@ Template.questions.helpers({
       },{
         id: 'q7',
         title: 'q7',
-        template: 'example',
+        template: 'q7',
         formId: 'q7',
       },{
         id: 'q8',
@@ -51,6 +51,16 @@ Template.questions.helpers({
         title: 'q10',
         template: 'q10',
         formId: 'q10',
+      },{
+        id: 'q11',
+        title: 'q11',
+        template: 'q11',
+        formId: 'q11',
+      },{
+        id: 'q12',
+        title: 'q12',
+        template: 'q12',
+        formId: 'q12',
         onSubmit: function(data, wizard) {
           // submit logic 
         }
