@@ -1,6 +1,5 @@
 Router.route('/', function () {
-  this.render('Home', {
-  });
+  this.render('home');
 });
 
 Router.route('/questions', function () {
