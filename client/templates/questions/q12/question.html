@@ -1,14 +1,24 @@
 <template name="q12">
 {{#autoForm id="q12" doc=step.data schema=schema }}
- 	<div class="row center">
-	 	<div class="col-md-8 col-md-offset-2">
-		    {{> afQuickField name="qele"}}	
-	 	</div>	 	
-	 	<div class="col-md-12">
-    		{{> wizardButtons}} 	
-	 	</div>
- 	</div>
- 
+		<div class="row center">
+		 	<div class="col-md-4 col-md-offset-8">
+			 	<div class="card">
+			        <div class="card-image">
+			            <img class="img-responsive" src="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TDlCYzRROE84YWM/materialdesign_introduction.png">
+			            <span class="card-title">Material Cards</span>
+			        </div>
+			        
+			        <div class="card-content">	
+		    			{{> afQuickField name="qele"}}	
+			        </div>
+			                
+			        <div class="card-action">
+	    				{{> wizardButtons}}
+			        </div>
+			    </div>
+			 	
+		 	</div> 		
+ 		</div>
  
   {{/autoForm}}
 </template>

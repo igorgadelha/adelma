@@ -6,8 +6,6 @@ Meteor.startup(() => {
 
 if (Meteor.isServer) {
 
-// Init DB collection
-ExampleItems = new Mongo.Collection('exampleItems');
   Meteor.startup(function () {
     // code to run on server at startup
     if(ExampleItems.find().count() == 0){

@@ -19,6 +19,10 @@ Schema.q1 = new SimpleSchema({
         type: "text"
       }
     }
+  },
+  users_id:{
+    type:String,
+    optional:false
   }
 });
 
@@ -31,13 +35,13 @@ Schema.q2 = new SimpleSchema({
       type: "select-checkbox-inline",
       options: function () {
         return [
-          {label: "CABEÇA", value: "CABEÇA"},
-          {label: "PESCOÇO", value: "PESCOÇO"},
-          {label: "OMBROS", value: "OMBROS"},
-          {label: "MÃOS", value: "MÃOS"},
-          {label: "TÓRAX", value: "TÓRAX"},
-          {label: "ABDÔMEN", value: "ABDÔMEN"},
-          {label: "PERNAS", value: "PERNAS"},
+          {label: "Cabeça", value: "cabeca"},
+          {label: "Pescoço", value: "pescoco"},
+          {label: "Ombros", value: "ombros"},
+          {label: "Mãos", value: "maos"},
+          {label: "Tórax", value: "torax"},
+          {label: "Abdômen", value: "abdomen"},
+          {label: "Pernas", value: "pernas"},
         ];
       }
     }
@@ -45,7 +49,7 @@ Schema.q2 = new SimpleSchema({
 });
 
 Schema.q3 = new SimpleSchema({
-  areastensas: {
+  areastensassituacaodeconflito: {
     type: String,
     optional: true,
     label:"ESCREVA NA CAIXA AS ÁREAS DO SEU CORPO QUE FICAM MAIS TENSAS EM SITUAÇÕES DE CONFLITO",    
@@ -56,7 +60,7 @@ Schema.q3 = new SimpleSchema({
 });
 
 Schema.q4 = new SimpleSchema({
-  areastensas: {
+  acaoacalmar: {
     type: [String],
     optional: true,
     label:"MARQUE A AÇÃO QUE GOSTARIA DE REALIZAR PARA SE ACALMAR",    
@@ -64,10 +68,10 @@ Schema.q4 = new SimpleSchema({
       type: "select-checkbox-inline",
       options: function () {
         return [
-          {label: "ESTICAR TODO CORPO", value: "CABEÇA"},
-          {label: "INSPIRAR E EXPIRAR", value: "PESCOÇO"},
-          {label: "FECHAR OS OLHOS E OUVIR MÚSICA", value: "OMBROS"},
-          {label: "ISOLAR PARA REORGANIZAR OS PENSAMENTOS", value: "MÃOS"}
+          {label: "Esticar todo o corpo", value: "esticar"},
+          {label: "Inspirar e Expirar", value: "inspiprar_e_expirar"},
+          {label: "Fechar os olhos e ouvir música", value: "ouvir_musica"},
+          {label: "Isolar para Reorganizar os pensamentos", value: "isolar"}
         ];
       }
     }
@@ -75,7 +79,7 @@ Schema.q4 = new SimpleSchema({
 });
 
 Schema.q5 = new SimpleSchema({
-  areastensas: {
+  outraacaoacalmar: {
     type: String,
     optional: true,
     label:"ESCREVA OUTRA AÇÃO QUE GOSTARIA DE REALIZAR PARA SE ACALMAR",    
@@ -85,24 +89,13 @@ Schema.q5 = new SimpleSchema({
   }
 });
 
-Schema.q6 = new SimpleSchema({
-  areastensas: {
-    type: String,
-    optional: true,
-    label:"ESCREVA OUTRA  AÇÃO QUE GOSTARIA DE REALIZAR PARA SE ACALMAR",    
-    autoform: {
-      type: "textarea",
-    }
-  }
-});
-
 
 
 Schema.q7 = new SimpleSchema({
-  areastensas: {
+  qualidadesparceiro: {
     type: [String],
     optional: true,
-    label:"MARQUE A AÇÃO QUE GOSTARIA DE REALIZAR PARA SE ACALMAR",    
+    label:"Selecione as qualidades do/a Parceiro/a ",    
     autoform: {
       type: "select2",
       afFieldInput: {
@@ -110,10 +103,12 @@ Schema.q7 = new SimpleSchema({
       },
       options: function () {
         return [
-          {label: "ESTICAR TODO CORPO", value: "CABEÇA"},
-          {label: "INSPIRAR E EXPIRAR", value: "PESCOÇO"},
-          {label: "FECHAR OS OLHOS E OUVIR MÚSICA", value: "OMBROS"},
-          {label: "ISOLAR PARA REORGANIZAR OS PENSAMENTOS", value: "MÃOS"}
+          {label: "INSEGURA, CIUMENTA", value: "insegura_ciumenta"},
+          {label: "AMIGA, BRIGUENTA", value: "amiga_briguenta"},
+          {label: "DESCONTROLADA, CONTROLADORA,  SEGURA", value: "descontrolada_controladora_segura"},
+          {label: "EMOTIVA, RESPEITOSA, CALMA", value: "emotiva_respeitosa_calma"},
+          {label: "COMUNICATIVA, ALEGRE", value: "comunicativa_alegre"},
+          {label: "MACHISTA, INDEPENDENTE EMOCIONALMENTE", value: "machista_independente"}
         ];
       }
     }
@@ -121,10 +116,10 @@ Schema.q7 = new SimpleSchema({
 });
 
 Schema.q8 = new SimpleSchema({
-  areastensas: {
+  qaprecia: {
     type: String,
     optional: true,
-    label:"ESCREVA AS QUALIDADES DA/O PARCEIRA/O QUE NÃO APRECIA",    
+    label:"ESCREVA AS QUALIDADES DA/O PARCEIRA/O QUE APRECIA",    
     autoform: {
       type: "textarea",
     }
@@ -132,7 +127,7 @@ Schema.q8 = new SimpleSchema({
 });
 
 Schema.q9 = new SimpleSchema({
-  areastensas: {
+  qnaprecia: {
     type: String,
     optional: true,
     label:"ESCREVA AS QUALIDADES DA/O PARCEIRA/O QUE NÃO APRECIA",    
@@ -144,7 +139,7 @@ Schema.q9 = new SimpleSchema({
 
 
 Schema.q10 = new SimpleSchema({
-  areastensas: {
+  autoavaliacao: {
     type: [String],
     optional: true,
     label:"CHEGOU SUA VEZ DE SE AVALIAR MARQUE AS SUAS CARACTERÍSTICAS",    
@@ -155,17 +150,17 @@ Schema.q10 = new SimpleSchema({
       },
       options: function () {
         return [
-          {label: "Controlador", value: "CABEÇA"},
-          {label: "Machista", value: "PESCOÇO"},
-          {label: "Agressivo", value: "OMBROS"},
-          {label: "Respeitoso", value: "MÃOS"},
-          {label: "Amigo", value: "TÓRAX"},
-          {label: "Calmo", value: "ABDÔMEN"},
-          {label: "Ciumento", value: "PERNAS"},
-          {label: "Inseguro", value: "PERNAS"},
-          {label: "Infiel", value: "PERNAS"},
-          {label: "Companheiro", value: "PERNAS"},
-          {label: "Independente Emocionalmente", value: "PERNAS"},
+          {label: "Controlador", value: "controlador"},
+          {label: "Machista", value: "machista"},
+          {label: "Agressivo", value: "agressivo"},
+          {label: "Respeitoso", value: "respeitoso"},
+          {label: "Amigo", value: "amigo"},
+          {label: "Calmo", value: "calmo"},
+          {label: "Ciumento", value: "ciumento"},
+          {label: "Inseguro", value: "inseguro"},
+          {label: "Infiel", value: "infiel"},
+          {label: "Companheiro", value: "companheiro"},
+          {label: "Independente Emocionalmente", value: "independente"},
         ];
       }
     }
@@ -174,7 +169,7 @@ Schema.q10 = new SimpleSchema({
 
 
 Schema.q11 = new SimpleSchema({
-  qele: {
+  suasqualidades: {
     type: String,
     optional: true,
     label:"ESCREVA AS SUAS QUALIDADES QUE NÃO QUER MAIS PARA VOCÊ",    
@@ -182,7 +177,7 @@ Schema.q11 = new SimpleSchema({
       type: "textarea",
     }
   },
-  qela: {
+  qcompanheira: {
     type: String,
     optional: true,
     label:"ESCREVA AS QUALIDADES DA COMPANHEIRA QUE NÃO QUER PARA ELA",    
@@ -202,3 +197,67 @@ Schema.q12 = new SimpleSchema({
     }
   }
 });
+
+
+form = new SimpleSchema({
+   inspirar: {
+    type: String,
+    optional: true,
+  },
+  expirar: {
+    type: String,
+    optional: true,
+  },
+  areastensas: {
+    type: [String],
+    optional: true,
+  },  
+  areastensassituacaodeconflito: {
+    type: String,
+    optional: true,
+  },  
+  acaoacalmar: {
+    type: [String],
+    optional: true,
+  },  
+  outraacaoacalmar: {
+    type: String,
+    optional: true,
+  },
+  qualidadesparceiro: {
+    type: [String],
+    optional: true,
+  },  
+  qaprecia: {
+    type: String,
+    optional: true,
+  },  
+  qnaprecia: {
+    type: String,
+    optional: true,
+  },   
+  autoavaliacao: {
+    type: [String],
+    optional: true,
+  },   
+  suasqualidades: {
+    type: String,
+    optional: true,
+  },   
+  qcompanheira: {
+    type: String,
+    optional: true,
+  },   
+  qele: {
+    type: String,
+    optional: true,
+  },   
+  users_id: {
+    type: String,
+    optional: false,
+  },
+
+});
+
+Avaliacoes = new Mongo.Collection('avaliacoes');
+Avaliacoes.attachSchema(form);

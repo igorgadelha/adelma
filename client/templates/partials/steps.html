@@ -1,0 +1,26 @@
+<template name="steps">
+  <nav>
+    <ol class="cd-multi-steps text-top">
+        {{#each wizard.steps}}
+          <li class="{{activeStepClass id}}">
+            {{#if pathForStep id}}
+              <a href="{{pathForStep id}}">{{title}}</a>
+            {{else}}
+              <a href="javascript:void(0)">{{title}}</a>
+            {{/if}}
+          </li>
+      {{/each}}
+    </ol>
+  </nav>
+</template>
+
+<template name="step">
+  <div class="wizard-step">
+  {{#autoForm id=step.formId doc=step.data schema=step.schema}}
+    {{#each afFieldNames}}
+      {{> afQuickField name=this.name options=afOptionsFromSchema}}
+    {{/each}}
+    {{> wizardButtons}}
+  {{/autoForm}}
+  </div>
+</template>

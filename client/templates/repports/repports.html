@@ -1,0 +1,10 @@
+<template name="repports">
+	{{#each user in resouces}}
+	    <div class="list-group">
+		  <a href="/users/{{user.users_id}}/{{user._id}}" class="list-group-item active">
+		    <h4 class="list-group-item-heading">{{user._id}}</h4>
+		    <p class="list-group-item-text"></p>
+		  </a>
+		</div>
+	{{/each}}
+</template>

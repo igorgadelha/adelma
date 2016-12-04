@@ -26,12 +26,14 @@ Template.questions.helpers({
         title: 'q5',
         template: 'q5',
         formId: 'q5',
-      },{
-        id: 'q6',
-        title: 'q6',
-        template: 'q6',
-        formId: 'q6',
-      },{
+      },
+      // {
+      //   id: 'q6',
+      //   title: 'q6',
+      //   template: 'q6',
+      //   formId: 'q6',
+      // },
+      {
         id: 'q7',
         title: 'q7',
         template: 'q7',
@@ -63,6 +65,17 @@ Template.questions.helpers({
         formId: 'q12',
         onSubmit: function(data, wizard) {
           // submit logic 
+          var self = this;
+            Avaliacoes.insert(_.extend( wizard.mergedData(), data ), function(err, id) {
+              if (err) {
+                console.log( err,_.extend( wizard.mergedData(), data ) );
+                self.done();
+              } else {
+                Router.go('/', {
+                  _id: id
+                });
+              }
+            });
         }
       }
     ]
