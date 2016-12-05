@@ -1,14 +1,17 @@
 <template name="users">
-	{{#each user in users}}
-	    <div class="list-group">
-		  <a href="/users/{{user._id}}" class="list-group-item">
-		    <h4 class="list-group-item-heading">
-		    	{{#each user.emails}}
-		    		{{address}}
-				{{/each}}
-		    </h4>
-		    <p class="list-group-item-text"></p>
-		  </a>
-		</div>
-	{{/each}}
+	{{> header}}
+	<div class="container">		
+		{{#each user in users}}
+		    <div class="list-group">
+			  <a href="/users/{{user._id}}" class="list-group-item">
+			    <h4 class="list-group-item-heading">
+			    	{{#each user.emails}}
+			    		{{address}}
+					{{/each}}
+			    </h4>
+			    <p class="list-group-item-text"></p>
+			  </a>
+			</div>
+		{{/each}}
+	</div>
 </template>

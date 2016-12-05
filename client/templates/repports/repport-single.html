@@ -1,10 +1,136 @@
 <template name="repportsingle">
-	{{#each user in resouces}}
-	    <div class="list-group">
-		  <a href="/users/{{user.users_id}}/{{user._id}}" class="list-group-item active">
-		    <h4 class="list-group-item-heading">{{user._id}}</h4>
-		    <p class="list-group-item-text"></p>
-		  </a>
-		</div>
-	{{/each}}
+	{{> header}}
+	<div class="container">		
+		{{#each user in resouces}}
+			    <div class="panel panel-default">
+				  <div class="panel-heading">Ações/Reações</div>
+				  <div class="panel-body">
+				    <div class="row">
+				    <div class="col-md-4">
+						<div class="panel panel-info">
+						  	<div class="panel-heading">Tempos</div>
+					  		<div class="panel-body">
+					  			<h6><b>Inspirar</b></h6>
+					    		<p style="padding-left: 5px">{{user.inspirar}}</p>
+					    		<hr/>
+					  			<h6><b>Expirar:</b></h6>
+					    		<p>{{user.expirar}}</p>
+			    		  	</div>		    	
+			    		</div>		    	
+	    			</div>				    
+	    			<div class="col-md-4">
+						<div class="panel panel-info">
+						  	<div class="panel-heading">Àreas tensas</div>
+					  		<div class="panel-body">
+					  			<h6><b>Em situações de conflito</b></h6>
+					    		<ul>
+						    		{{#each q in user.areastensas}}
+						    			<li>{{q}}</li>
+						    		{{/each}}
+					    		</ul>
+					    		<hr/>
+					  			<h6><b>Descrição:</b></h6>
+					    		<p>{{user.areastensassituacaodeconflito}}</p>
+			    		  	</div>		    	
+			    		</div>		    	
+	    			</div>
+	    			<div class="col-md-4">
+						<div class="panel panel-info">
+						  	<div class="panel-heading">Para se acalmar</div>
+					  		<div class="panel-body">
+					  			<h6><b>Ações se acalmar</b></h6>
+					  			<ul>
+						    		{{#each q in user.acaoacalmar}}
+						    			<li>{{q}}</li>
+						    		{{/each}}
+					    		</ul>
+					    		<hr/>
+					  			<h6><b>Descrição:</b></h6>
+					    		<p>{{user.outraacaoacalmar}}</p>
+			    		  	</div>		    	
+			    		</div>		    	
+	    			</div>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="panel panel-success">
+				  <div class="panel-heading">Autoavaliação</div>
+				  <div class="panel-body">
+				    <div class="row">
+				    	<div class="col-md-4">
+    						<div class="panel panel-info">
+							  	<div class="panel-heading">O que aprecia em si</div>
+						  		<div class="panel-body">
+						  			<h6><b>autoavaliação</b></h6>
+						  			<ul>
+							    		{{#each q in user.autoavaliacao}}
+							    			<li>{{q}}</li>
+							    		{{/each}}
+						    		</ul>
+						    		<hr/>
+						  			<h6><b>Qualidades que não deseja mais para você:</b></h6>
+						    		<p>{{user.suasqualidades}}</p>
+				    		  	</div>		    	
+				    		</div>		    					    	
+			    		</div>		    					    	
+		    			<div class="col-md-8">
+    						<div class="panel panel-info">
+							  	<div class="panel-heading">Avaliação do companheiro(a)</div>
+						  		<div class="panel-body">
+  					    			<div class="col-md-6">
+			    						<div class="panel panel-info">
+										  	<div class="panel-heading">O que aprecia na companheiro(a)</div>
+									  		<div class="panel-body">
+									  			<h6><b>Qualidades no companheiro(a):</b></h6>
+									    		<ul>
+										    		{{#each q in user.qualidadesparceiro}}
+										    			<li>{{q}}</li>
+										    		{{/each}}
+									    		</ul>
+									    		<hr/>
+									  			<h6><b>Qualidades do parceiro(a):</b></h6>
+									  			<ul>
+										    		{{#each q in user.qualidadesparceiro}}
+										    			<li>{{q}}</li>
+										    		{{/each}}
+									    		</ul>
+									    		<hr/>
+									    		<h6><b>Que aprecia na companheiro(a):</b></h6>
+									    		<p style="padding-left: 5px">{{user.qcompanheira}}</p>
+							    		  	</div>		    	
+							    		</div>		    	
+					    			</div>  					    			
+					    			<div class="col-md-6">
+			    						<div class="panel panel-danger">
+										  	<div class="panel-heading">O que não aprecia na companheiro(a)</div>
+									  		<div class="panel-body">
+									  			<h6><b>O que não aprecia no companheiro(a):</b></h6>
+									    		<p style="padding-left: 5px">{{user.qnaprecia}}</p>
+									    		<hr/>
+									    		<h6><b>Qualidades que não quer mais para seu companheiro:</b></h6>
+									    		<p style="padding-left: 5px">{{user.qcompanheira}}</p>
+							    		  	</div>		    	
+							    		</div>		    	
+					    			</div>
+				    		  	</div>		    	
+				    		</div>		    	
+		    			</div>
+
+		    			<div class="col-md-12">
+    						<div class="panel panel-info">
+							  	<div class="panel-heading">Avaliação do Casal</div>
+						  		<div class="panel-body">
+						  			<h6><b>Avaliação do casal</b></h6>
+						    		<p >{{user.qele}}</p>
+				    		  	</div>		    	
+				    		</div>		    	
+		    			</div>
+
+				    </div>
+				  </div>
+				</div>
+		    
+		{{/each}}
+	</div>
 </template>
