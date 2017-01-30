@@ -20,8 +20,20 @@ body a{
 	-o-transition:0.5s all;
 }
 .bg{
-	background:url(../images/head-bg.jpg) no-repeat 0px 0px;
+	background:url(../images/maos.jpg) no-repeat 0px 0px;
+	background-size: cover;
 }
+.navbar-inverted {
+	background: rgba(255,255,255, 0.1);
+}
+.navbar-header a, li.active a, a.dropdown-toggle {
+  color: white;
+}
+
+li.active a:hover, a.dropdown-toggle:hover {
+  color: black;
+}
+
 /*----start-header----*/
 .header{
 	padding: 1em 0;
