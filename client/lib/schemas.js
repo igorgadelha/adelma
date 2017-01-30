@@ -3,7 +3,7 @@ Schema.q1 = new SimpleSchema({
   inspirar: {
     type: String,
     optional: true,
-    label:"PRIMEIRO CONTE  E ESCREVA A QUANTIDADE DE TEMPO QUE LEVA PARA INSPIRAR",    
+    label:"Primeiro conte e escreva a quantidade de tempo que leva para inspirar",
     autoform: {
       afFieldInput: {
         type: "text"
@@ -13,7 +13,7 @@ Schema.q1 = new SimpleSchema({
   expirar: {
     type: String,
     optional: true,
-    label:"AGORA CONTE E ESCREVA A QUANTIDADE DE TEMPO QUE LEVA PARA  EXPIRAR",    
+    label:"Agora conte e escreva a quantidade de tempo que leva para expirar",
     autoform: {
       afFieldInput: {
         type: "text"
@@ -30,7 +30,7 @@ Schema.q2 = new SimpleSchema({
   areastensas: {
     type: [String],
     optional: true,
-    label:"MARQUE  AS ÁREAS DO SEU CORPO QUE FICAM MAIS TENSAS EM SITUAÇÕES DE CONFLITO",    
+    label:"Marque as áreas do seu corpo que ficam tensas em situações de conflito",
     autoform: {
       type: "select-checkbox-inline",
       options: function () {
@@ -52,7 +52,7 @@ Schema.q3 = new SimpleSchema({
   areastensassituacaodeconflito: {
     type: String,
     optional: true,
-    label:"ESCREVA NA CAIXA AS ÁREAS DO SEU CORPO QUE FICAM MAIS TENSAS EM SITUAÇÕES DE CONFLITO",    
+    label:"Escreva na caixa as áreas do se corpo que ficam mais tensas em situações de conflito",
     autoform: {
       type: "textarea",
     }
@@ -63,7 +63,7 @@ Schema.q4 = new SimpleSchema({
   acaoacalmar: {
     type: [String],
     optional: true,
-    label:"MARQUE A AÇÃO QUE GOSTARIA DE REALIZAR PARA SE ACALMAR",    
+    label:"Marque a ação que gostaria de realizar para se acalmar",
     autoform: {
       type: "select-checkbox-inline",
       options: function () {
@@ -82,7 +82,7 @@ Schema.q5 = new SimpleSchema({
   outraacaoacalmar: {
     type: String,
     optional: true,
-    label:"ESCREVA OUTRA AÇÃO QUE GOSTARIA DE REALIZAR PARA SE ACALMAR",    
+    label:"Escreva outra ação que gostaria de realizar para se acalmar",
     autoform: {
       type: "textarea",
     }
@@ -95,7 +95,7 @@ Schema.q7 = new SimpleSchema({
   qualidadesparceiro: {
     type: [String],
     optional: true,
-    label:"Selecione as qualidades do/a Parceiro/a ",    
+    label:"Selecione as qualidades do/a Parceiro/a ",
     autoform: {
       type: "select2",
       afFieldInput: {
@@ -103,12 +103,20 @@ Schema.q7 = new SimpleSchema({
       },
       options: function () {
         return [
-          {label: "INSEGURA, CIUMENTA", value: "insegura_ciumenta"},
-          {label: "AMIGA, BRIGUENTA", value: "amiga_briguenta"},
-          {label: "DESCONTROLADA, CONTROLADORA,  SEGURA", value: "descontrolada_controladora_segura"},
-          {label: "EMOTIVA, RESPEITOSA, CALMA", value: "emotiva_respeitosa_calma"},
-          {label: "COMUNICATIVA, ALEGRE", value: "comunicativa_alegre"},
-          {label: "MACHISTA, INDEPENDENTE EMOCIONALMENTE", value: "machista_independente"}
+          {label: "INSEGURA", value: "insegura"},
+          {label: "CIUMENTA", value: "ciumenta"},
+          {label: "AMIGA", value: "amiga"},
+          {label: "BRIGUENTA", value: "briguenta"},
+          {label: "DESCONTROLADA", value: "descontrolada"},
+          {label: "CONTROLADORA", value: "controladora"},
+          {label: "SEGURA", value: "segura"},
+          {label: "EMOTIVA", value: "emotiva"},
+          {label: "RESPEITOSA", value: "respeitosa"},
+          {label: "CALMA", value: "calma"},
+          {label: "COMUNICATIVA", value: "comunicativa"},
+          {label: "ALEGRE", value: "alegre"},
+          {label: "MACHISTA", value: "machista"},
+          {label: "INDEPENDENTE EMOCIONALMENTE", value: "independente"}
         ];
       }
     }
@@ -119,7 +127,7 @@ Schema.q8 = new SimpleSchema({
   qaprecia: {
     type: String,
     optional: true,
-    label:"ESCREVA AS QUALIDADES DA/O PARCEIRA/O QUE APRECIA",    
+    label:"Escreva as qualidades da/o parceira/o que aprecia",
     autoform: {
       type: "textarea",
     }
@@ -130,7 +138,7 @@ Schema.q9 = new SimpleSchema({
   qnaprecia: {
     type: String,
     optional: true,
-    label:"ESCREVA AS QUALIDADES DA/O PARCEIRA/O QUE NÃO APRECIA",    
+    label:"Escreva as qualidades da/o parceira/o que não aprecia",
     autoform: {
       type: "textarea",
     }
@@ -142,7 +150,7 @@ Schema.q10 = new SimpleSchema({
   autoavaliacao: {
     type: [String],
     optional: true,
-    label:"CHEGOU SUA VEZ DE SE AVALIAR MARQUE AS SUAS CARACTERÍSTICAS",    
+    label:"Chegou sua vez de se avaliar, marque as suas características",
     autoform: {
       type: "select2",
       afFieldInput: {
@@ -172,7 +180,7 @@ Schema.q11 = new SimpleSchema({
   suasqualidades: {
     type: String,
     optional: true,
-    label:"ESCREVA AS SUAS QUALIDADES QUE NÃO QUER MAIS PARA VOCÊ",    
+    label:"Escreva as suas qualidades que não quer mais para você",
     autoform: {
       type: "textarea",
     }
@@ -180,7 +188,7 @@ Schema.q11 = new SimpleSchema({
   qcompanheira: {
     type: String,
     optional: true,
-    label:"ESCREVA AS QUALIDADES DA COMPANHEIRA QUE NÃO QUER PARA ELA",    
+    label:"Escreva as qualidades da companheira/o que não quer mais para ela/e",
     autoform: {
       type: "textarea",
     }
@@ -191,7 +199,7 @@ Schema.q12 = new SimpleSchema({
   qele: {
     type: String,
     optional: true,
-    label:"ESCREVA AS QUALIDADES DO RELACIONAMENTO RESPEITOSO ENTRE O CASAL",    
+    label:"Escreva as qualidades do relacionamento respeitoso entre o casal",
     autoform: {
       type: "textarea",
     }
@@ -211,15 +219,15 @@ form = new SimpleSchema({
   areastensas: {
     type: [String],
     optional: true,
-  },  
+  },
   areastensassituacaodeconflito: {
     type: String,
     optional: true,
-  },  
+  },
   acaoacalmar: {
     type: [String],
     optional: true,
-  },  
+  },
   outraacaoacalmar: {
     type: String,
     optional: true,
@@ -227,31 +235,31 @@ form = new SimpleSchema({
   qualidadesparceiro: {
     type: [String],
     optional: true,
-  },  
+  },
   qaprecia: {
     type: String,
     optional: true,
-  },  
+  },
   qnaprecia: {
     type: String,
     optional: true,
-  },   
+  },
   autoavaliacao: {
     type: [String],
     optional: true,
-  },   
+  },
   suasqualidades: {
     type: String,
     optional: true,
-  },   
+  },
   qcompanheira: {
     type: String,
     optional: true,
-  },   
+  },
   qele: {
     type: String,
     optional: true,
-  },   
+  },
   users_id: {
     type: String,
     optional: false,

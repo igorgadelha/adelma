@@ -24,5 +24,5 @@ if (Meteor.isServer) {
       ExampleItems.insert({title: "MACHISTA", order: 13});
       ExampleItems.insert({title: "INDEPENDENTE EMOCIONALMENTE", order: 14});
     }
-  });  
+  });
 }

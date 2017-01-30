@@ -53,7 +53,7 @@ body a{
 	text-decoration: none;
 	border-radius: 0.3em;
 	display: inline-block;
-	
+
 }
 .login:hover{
 	color:#67BF95;
@@ -71,7 +71,7 @@ body a{
 .slide-banner-left p{
 	color: #C5D2E5;
 	font-size: 1.5em;
-	width: 64%;
+	width: 100%;
 	margin: 2em 0 2.5em;
 }
 .b-btn{
@@ -321,7 +321,7 @@ body a{
 	width:200px;
 	height:200px;
 	display:inline-block;
-	background:url(../images/msg-icon.png) no-repeat 0px 0px; 
+	background:url(../images/msg-icon.png) no-repeat 0px 0px;
 }
 .contact p{
 	text-align: center;
@@ -443,7 +443,7 @@ body a{
 .payment-online-form-left h4{
 	font-size: 1.8em;
 	color:#3D4B60;
-	padding: 0.5em 0;	
+	padding: 0.5em 0;
 }
 .payment-online-form-left span{
 	vertical-align: middle;
@@ -891,7 +891,7 @@ button::-moz-focus-inner {
   right: -6px;
   text-align: right;
   padding-right: 6px;
-  width: 100%; 
+  width: 100%;
   outline:none;
  }
 
@@ -1259,7 +1259,7 @@ img.mfp-img {
 		display:none;
 	}
 	.slide-banner-left h1 {
-		margin: 0;	
+		margin: 0;
 	}
 	.top-grids {
 		padding: 3em 0;
@@ -1354,7 +1354,7 @@ img.mfp-img {
 		display:none;
 	}
 	.slide-banner-left h1 {
-		margin: 0;	
+		margin: 0;
 	}
 	.top-grids {
 		padding: 3em 0;
@@ -1453,7 +1453,7 @@ img.mfp-img {
 		display:none;
 	}
 	.slide-banner-left h1 {
-		margin: 0;	
+		margin: 0;
 		font-size: 3.2em;
 	}
 	.top-grids {

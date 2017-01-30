@@ -2,7 +2,11 @@
 	{{#autoForm id="q11" doc=step.data schema=schema }}
 		<div class="row">
 		<div class="col-md-8">
-	 		<img  class="img-responsive" src="images/telas/11.png">
+			<div class="card">
+				<div class="card-image">
+			 		<img  class="img-responsive img-adjust-card" src="images/telas/11.png">
+			 	</div>
+		 	</div>
 	 	</div>
 		 	<div class="col-md-4">
 			 	<div class="card">
@@ -10,19 +14,23 @@
 			            <img class="img-responsive" src="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TDlCYzRROE84YWM/materialdesign_introduction.png">
 			            <span class="card-title">Material Cards</span>
 			        </div>
-			        
+
 			        <div class="card-content">
-					    {{> afQuickField name="suasqualidades"}}	
-					    {{> afQuickField name="qcompanheira"}}	
+								<audio controls>
+									<source src="audios/11.mp3" type="audio/mpeg">
+									Your browser does not support the audio element.
+								</audio>
+					    {{> afQuickField name="suasqualidades"}}
+					    {{> afQuickField name="qcompanheira"}}
 			        </div>
-			                
+
 			        <div class="card-action">
 	    				{{> wizardButtons}}
 			        </div>
 			    </div>
-			 	
-		 	</div> 		
+
+		 	</div>
  		</div>
- 
+
   {{/autoForm}}
 </template>

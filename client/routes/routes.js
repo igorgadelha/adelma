@@ -15,7 +15,7 @@ Router.route('/users', function () {
 Router.route('/users/:_id', function () {
   this.render('repports', {
       data: function () {
-          avaliacoes = Avaliacoes.find({users_id: this.params._id}); 
+          avaliacoes = Avaliacoes.find({users_id: this.params._id});
           return [avaliacoes.fetch()];
       }
    });
@@ -29,4 +29,9 @@ Router.route('/users/:_id/:test_id', function () {
 	    }
    });
 
+});
+
+Router.route('/profile', function () {
+  this.render('profile', {
+  });
 });

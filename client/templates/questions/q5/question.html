@@ -1,23 +1,34 @@
 <template name="q5">
 	{{#autoForm id="q5" doc=step.data schema=schema }}
 		<div class="row center">
-		 	<div class="col-md-4 col-md-offset-8">
+			<div class="col-md-8">
+				<div class="card">
+					<div class="card-image">
+						<img  class="img-responsive img-adjust-card" src="images/novas/06.png">
+					</div>
+				</div>
+			</div>
+		 	<div class="col-md-4">
 			 	<div class="card">
 			        <div class="card-image">
 			            <img class="img-responsive" src="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TDlCYzRROE84YWM/materialdesign_introduction.png">
 			            <span class="card-title">Material Cards</span>
 			        </div>
-			        
+
 			        <div class="card-content">
-			    		{{> afQuickField name="outraacaoacalmar"}}	
+								<audio controls>
+									<source src="audios/05.mp3" type="audio/mpeg">
+									Your browser does not support the audio element.
+								</audio>
+			    		{{> afQuickField name="outraacaoacalmar"}}
 			        </div>
-			                
+
 			        <div class="card-action">
 	    				{{> wizardButtons}}
 			        </div>
 			    </div>
-			 	
-		 	</div> 		
- 		</div> 
+
+		 	</div>
+ 		</div>
   {{/autoForm}}
 </template>

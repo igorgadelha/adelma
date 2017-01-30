@@ -1,1 +1,2 @@
-Meteor.subscribe('Avaliacoes');	
+Meteor.subscribe('Avaliacoes');
+Meteor.subscribe('userList');	
