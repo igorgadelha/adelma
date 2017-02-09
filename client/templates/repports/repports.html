@@ -2,13 +2,23 @@
 	{{> header}}
 	<div class="container">
 		{{> breadcrumb }}
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Teste</th>
+					<th>ações</th>
+				</tr>
+			</thead>
+			<tbody>
 		{{#each user in resouces}}
-		    <div class="list-group">
-			  <a href="/users/{{user.users_id}}/{{user._id}}" class="list-group-item active">
-			    <h4 class="list-group-item-heading">{{user._id}}</h4>
-			    <p class="list-group-item-text"></p>
-			  </a>
-			</div>
+		<tr>
+			<td>Teste <span class="label label-info">{{user._id}}</span></td>
+			<td>
+				<a href="/users/{{user.users_id}}/{{user._id}}" class="btn btn-success"> Ver teste</a>
+			</td>
+		</tr>
 		{{/each}}
+	</tbody>
+</table>
 	</div>
 </template>

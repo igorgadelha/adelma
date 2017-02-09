@@ -5,7 +5,10 @@ Router.route('/', {
 });
 
 Router.route('/questions', {
-  template: 'questions'
+  template: 'questions',
+  name: 'questions',
+  title: 'Jogo',
+  parent: 'home',
 });
 
 Router.route('/users', {

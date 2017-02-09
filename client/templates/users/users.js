@@ -12,7 +12,7 @@ Template.users.onCreated(function () {
         sort: {
             _id: -1
         },
-        perPage: 1
+        perPage: 10
     });
 });
 

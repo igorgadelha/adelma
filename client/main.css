@@ -18,8 +18,10 @@
   padding: 5%;
 }
 .slide-banner-left {
-  background: rgba(255,255,255,0.1sr);
-  padding:10px;
+  color: white;
+  text-align: justify;
+  background: rgba(255,255,255,0.4);
+  padding:30px;
   border-radius: 5px;
   text-shadow: 4px 5px 6px black;
 }
