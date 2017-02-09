@@ -17,7 +17,12 @@
   width: 100%;
   padding: 5%;
 }
-
+.slide-banner-left {
+  background: rgba(255,255,255,0.1);
+  padding:10px;
+  border-radius: 5px;
+  text-shadow: 4px 5px 6px black;
+}
 @media only screen and (min-width: 768px) {
   .cd-multi-steps.text-top li, .cd-multi-steps.text-bottom li {
         width: 60px !important;

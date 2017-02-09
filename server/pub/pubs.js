@@ -5,3 +5,5 @@ Meteor.publish("userList", function () {
 Meteor.publish("Avaliacoes", function () {
    return Avaliacoes.find({});
 });
+
+new Meteor.Pagination( Meteor.users );

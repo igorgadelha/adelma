@@ -1,17 +1,36 @@
 <template name="users">
 	{{> header}}
-	<div class="container">		
-		{{#each user in users}}
-		    <div class="list-group">
-			  <a href="/users/{{user._id}}" class="list-group-item">
-			    <h4 class="list-group-item-heading">
-			    	{{#each user.emails}}
-			    		{{address}}
-					{{/each}}
-			    </h4>
-			    <p class="list-group-item-text"></p>
-			  </a>
-			</div>
-		{{/each}}
+	<div class="container">
+
+		{{#if isReady}}
+			<table class="table table-striped">
+		    <thead>
+		      <tr>
+		        <th>ID</th>
+		        <th>E-mail</th>
+		        <th>Ações</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+				 {{#each doc in documents}}
+					 <tr>
+						 <td>{{doc._id}}</td>
+						 <td>
+							 {{#each doc.emails}}
+								 {{address}}
+							 {{/each}}
+						 </td>
+						 <td>
+							 <a href="/users/{{doc._id}}" class="btn btn-success"> Ver testes</a>
+						 </td>
+					 </tr>
+			 	 {{/each}}
+			 </tbody>
+	 </table>
+
+	 	{{> defaultBootstrapPaginator pagination=templatePagination limit=1 containerClass="text-center" onClick=clickEvent}}
+ 	 {{else}}
+		 Carregando...
+ 	 {{/if}}
 	</div>
 </template>
