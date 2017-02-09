@@ -18,7 +18,7 @@
   padding: 5%;
 }
 .slide-banner-left {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.1sr);
   padding:10px;
   border-radius: 5px;
   text-shadow: 4px 5px 6px black;

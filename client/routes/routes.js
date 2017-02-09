@@ -1,35 +1,42 @@
-Router.route('/', function () {
-  this.render('home');
+Router.route('/', {
+    template: 'home',
+    name: 'home',
+    title: 'Home'
 });
 
-Router.route('/questions', function () {
-  this.render('questions', {
-  });
+Router.route('/questions', {
+  template: 'questions'
 });
 
-Router.route('/users', function () {
-  this.render('users', {
-  });
+Router.route('/users', {
+    name: 'users',
+    title: 'Usuários',
+    parent: 'home',
+    template:'users'
 });
 
-Router.route('/users/:_id', function () {
-  this.render('repports', {
-      data: function () {
-          avaliacoes = Avaliacoes.find({users_id: this.params._id});
-          return [avaliacoes.fetch()];
-      }
-   });
+Router.route('/users/:_id', {
+  name: 'repports',
+  title: 'Testes',
+  parent: 'users',
+  template:'repports',
+  data: function () {
+      avaliacoes = Avaliacoes.find({users_id: this.params._id});
+      return [avaliacoes.fetch()];
+  }
 });
 
-Router.route('/users/:_id/:test_id', function () {
-  this.render('repportsingle', {
-	    data: function () {
-	    	  avaliacoes = Avaliacoes.find({users_id: this.params._id, _id: this.params.test_id});
-	      	return [avaliacoes.fetch()];
-	    }
-   });
+Router.route('/users/:_id/:test_id', {
+  name: 'repportsingle',
+  title: 'Teste',
+  parent: 'repports',
+  template:'repportsingle',
+  data: function () {
+    avaliacoes = Avaliacoes.find({users_id: this.params._id, _id: this.params.test_id});
+    return [avaliacoes.fetch()];
+  }
 
-});
+ });
 
 Router.route('/profile', function () {
   this.render('profile', {

@@ -1,6 +1,7 @@
 <template name="repports">
 	{{> header}}
 	<div class="container">
+		{{> breadcrumb }}
 		{{#each user in resouces}}
 		    <div class="list-group">
 			  <a href="/users/{{user.users_id}}/{{user._id}}" class="list-group-item active">

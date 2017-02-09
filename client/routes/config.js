@@ -1,3 +1,5 @@
 Router.configure({
-  layoutTemplate: 'layout'
+  layoutTemplate: 'layout',
+  defaultBreadcrumbTitle: 'Navegação',
+  defaultBreadcrumbLastLink: true
 });
