@@ -4,6 +4,17 @@ Router.route('/', {
     title: 'Home'
 });
 
+Router.route('/conheca', {
+    template: 'conheca',
+    name: 'conheca',
+    title: 'Conheca'
+});
+Router.route('/termo-de-uso', {
+    template: 'termos-de-uso',
+    name: 'termo-de-uso',
+    title: 'termo-de-uso'
+});
+
 Router.route('/questions', {
   template: 'questions',
   name: 'questions',

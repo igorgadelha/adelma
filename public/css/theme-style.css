@@ -86,12 +86,12 @@ li.active a:hover, a.dropdown-toggle:hover, li.open a {
 	font-family: 'Enriqueta', serif;
 }
 .slide-banner-left h1{
-	color: #FFF;
+	color: black;
 	font-size: 3.5em;
 }
 .slide-banner-left p{
 	/*color: #C5D2E5;*/
-	color: white;
+	color: black;
 	font-size: 1.5em;
 	width: 100%;
 	margin: 2em 0 2.5em;
